@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Mars Data!</a></p>
+    </div>
+    <!-- rendering data -->
+    <div class="row" id="mars-details"> 
+      <div class="col-md-12">
+        <!-- <h4 class="heading">{{mars_info.News_Title}}</h4> -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>News_Title</th>
+                    <th>Paragraph</th>
+                    <th>Image_url</th>
+                    <th>Latest_Weather</th>
+                    <th>Mars_Image_Desc</th>
+                    <th>Mars_Image_URL</th>
+                <tr>
+            </thead>
+            <tbody>
+                {% for info in mars_info %}
+                <tr>
+                    <td>{{ info.News_Title }}</td>
+                    <td>{{ info.Paragraph }}</td>
+                    <td>{{ info.Image_url }}</td>
+                    <td>{{ info.Latest_Weather }}</td>
+                    <td>{{ info.images_desc }}</td>
+                    <td>{{ info.Mars_Image_URL }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>       
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
