@@ -40,6 +40,9 @@ def scrape():
     clean_href = image_href.split("'")
     url_original = 'https://www.jpl.nasa.gov'
     featured_image_url = url_original + clean_href[1]
+    #Mars facts scraping
+    mars_facts_url = 'http://space-facts.com/mars/'
+    facts_table = pd.read_html(mars_facts_url)
     #Mars weather scraping
     mars_twitter_url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(mars_twitter_url)
@@ -74,6 +77,7 @@ def scrape():
         "Paragraph":news_p,
         "Image_url":featured_image_url,
         "Latest_Weather": mars_weather,
+        "Mars_Facts": facts_table,
         "Mars_Image_Desc":images_desc,
         "Mars_Image_URL": images_url
     }

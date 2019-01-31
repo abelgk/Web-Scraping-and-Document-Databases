@@ -25,6 +25,7 @@
                     <th>Paragraph</th>
                     <th>Image_url</th>
                     <th>Latest_Weather</th>
+                    <th>Mars_Facts</th>
                     <th>Mars_Image_Desc</th>
                     <th>Mars_Image_URL</th>
                 <tr>
@@ -32,19 +33,19 @@
             <tbody>
                 {% for info in mars_info %}
                 <tr>
-                    <td>{{ info.News_Title }}</td>
-                    <td>{{ info.Paragraph }}</td>
-                    <td>{{ info.Image_url }}</td>
-                    <td>{{ info.Latest_Weather }}</td>
-                    <td>{{ info.images_desc }}</td>
-                    <td>{{ info.Mars_Image_URL }}</td>
+                    <td>{{ mars_info.News_Title }}</td>
+                    <td>{{ mars_info.Paragraph }}</td>
+                    <td>{{ mars_info.Image_url }}</td>
+                    <td>{{ mars_info.Latest_Weather }}</td>
+                    <td>{{ mars_info.Mars_Facts</td>
+                    <td>{{ mars_info.images_desc }}</td>
+                    <td>{{ mars_info.Mars_Image_URL }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>       
       </div>
     </div>
-
   </div>
 </body>
 </html>
